@@ -11,14 +11,13 @@ db=wp_database
 
 #Script
 cd $db_archive_folder
-echo "Compressing database archive"
-sleep 5
-tar -czf $db_archive_file
-echo "Compression finished, check the folder $db_archive_folder"
-sleep 5
-echo "Deploying database dump into $db database"
+echo "Creating database dump for the $db database"
 echo "Enter the $db_user password"
 mysqldump -u $db_user -h $db_host -p $db > $db_backup_file
-echo "Database backup is completed, cleaning up..."
-rm -rf $db_backup_file
-echo "The job is completed on $date"
+echo "Database backup is completed"
+echo "Compressing database archive"
+sleep 5
+tar -czf $db_archive_file $db_backup_file
+echo "Compression finished, check the folder $db_archive_folder"
+sleep 5
+echo "The backup job is completed on $date"

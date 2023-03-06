@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Variables
 date=$(date '+%Y-%m-%d %H:%M:%S')
 db_archive_folder=~/Downloads
 db_backup_file=wp_db.sql
@@ -7,6 +8,7 @@ db_user=wp_user
 db_host=127.0.0.1
 db=wp_database
 
+#Logic
 cd $db_archive_folder
 echo "Extracting database archive"
 sleep 5

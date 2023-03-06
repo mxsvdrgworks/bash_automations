@@ -1,6 +1,6 @@
 #!/bin/bash
 
-date=$(date)
+date=$(date '+%Y-%m-%d %H:%M:%S')
 db_archive_folder=~/Downloads
 db_backup_file=wp_db.sql
 db_user=wp_user

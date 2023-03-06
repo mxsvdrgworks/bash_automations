@@ -21,4 +21,4 @@ echo "Enter the $db_user password"
 mysqldump -u $db_user -h $db_host -p $db < $db_backup_file
 echo "Database restore is completed, cleaning up..."
 rm -rf $db_backup_file
-echo "The job is completed on $date"
+echo "The restore job is completed on $date"

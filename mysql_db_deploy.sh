@@ -1,11 +1,11 @@
 #!/bin/bash
 
-$date=date
-$db_archive_folder=~/Downloads
-$db_backup_file=wp_db.sql
-$db_user=wp_user
-$db_host=127.0.0.1
-$db=wp_database
+date=$(date)
+db_archive_folder=~/Downloads
+db_backup_file=wp_db.sql
+db_user=wp_user
+db_host=127.0.0.1
+db=wp_database
 
 cd $db_archive_folder
 echo "Extracting database archive"

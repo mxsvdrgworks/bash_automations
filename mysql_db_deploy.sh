@@ -8,7 +8,7 @@ db_user=wp_user
 db_host=127.0.0.1
 db=wp_database
 
-#Logic
+#Script
 cd $db_archive_folder
 echo "Extracting database archive"
 sleep 5

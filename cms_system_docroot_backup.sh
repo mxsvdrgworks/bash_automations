@@ -2,7 +2,7 @@
 
 #Variables
 cms_system=wait user input
-cms_docroot=
+cms_docroot=$_SERVER['DOCUMENT_ROOT']
 #Script logic
 if [ $cms_system = 1 ]; then
 	echo "Wordpress docroot in the $cms_docroot"

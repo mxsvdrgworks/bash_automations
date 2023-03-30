@@ -1,17 +1,15 @@
 #!/bin/bash
-
-#Variables
-cms_system=wait user input
-cms_docroot=$_SERVER['DOCUMENT_ROOT']
 #Script logic
-if [ $cms_system = 1 ]; then
-	echo "Wordpress docroot in the $cms_docroot"
-elif [ $cms_system = 2 ]; then
-	echo "Drupal docroot in the $cms_docroot"
-elif [ $cms_system = 3 ]; then
-	echo "Joomla docroot in the $cms_docroot"
-elif [ $cms_system = 4 ]; then
-	echo "Opencart docroot in the $cms_docroot"
-else
-	echo "You are an elder."
-fi
+#!/bin/bash
+echo "Select your CMS"
+echo "  1)Wordpress"
+echo "  2)Drupal"
+echo "  3)Joomla"
+
+read n
+case $n in
+  1) echo "Backing up Wordpress docroot" && tar -czf mywordpress_site_backup.tar.gz /var/www/wordpress;;
+  2) echo "Backing up Drupal docroot" && tar -czf mydrupal_site_backup.tar.gz /usr/share/drupal;;
+  3) echo "Backing up Joomla docroot" && tar -czf mydrupal_site_backup.tar.gz /usr/share/joomla;;
+  *) echo "invalid option";;
+esac
